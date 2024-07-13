@@ -144,3 +144,16 @@ input {
 .active {
     background-color: white;
 }
+.button {
+    margin: 3px;
+    border-radius: 4px;
+    border: 1px solid slategray;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttondiv {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

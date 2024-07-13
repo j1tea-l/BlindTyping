@@ -43,15 +43,31 @@ window.onkeydown = event => {
 /*
     Обработка нажатий 
  */
-let sampleString = 'for example for example For example For example';
-let inputElement = document.querySelector(".main__input");
-
-inputElement.value = sampleString;
 window.onkeyup = event => {
-    inputElement = document.querySelector(".main__input");
+    let inputElement = document.querySelector(".main__input");
     if (inputElement.value[0] === event.key) {
         inputElement.value = inputElement.value.substring(1, inputElement.value.length);
     }
 }
 
+document.getElementById("generateButton").addEventListener("click",
+    function () {
+        //отправляет post в метод RunAPI(bool) 
+        fetch('/Home/RunAPI',
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ torun: true })
+            })
+            .then(response => response.json({ result: true }))
+            .then(data => {
+                var el = document.querySelector(".main__input");
+                el.setAttribute("placeholder", data);
+                var sampleString = el.getAttribute("placeholder");
+                //иниц переменых сюда пришлось вьебать, по другому не работает хз поч
+                let inputElement = document.querySelector(".main__input");
+                inputElement.value = sampleString;
+            })
+            .catch(error => console.error('Error:', error));
+    });
+//короче я инпут сломал, но пусть виталик разберется
 

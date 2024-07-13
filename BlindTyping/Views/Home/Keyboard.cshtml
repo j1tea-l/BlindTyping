@@ -1,0 +1,96 @@
+﻿@using System.Net
+@using System.Net.Http
+@using System.Text
+@using System
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+    <script src="script.js"></script>
+    <div class="touch__typing">
+        <span>Touch Typing</span>
+        <label>
+            <input class="main__input" type="text" placeholder="">
+        </label>
+    </div>
+    <div class="keyboard">
+        <div class="line">
+            <div class="key k192">`</div>
+            <div class="key k49">1</div>
+            <div class="key k50">2</div>
+            <div class="key k51">3</div>
+            <div class="key k52">4</div>
+            <div class="key k53">5</div>
+            <div class="key k54">6</div>
+            <div class="key k55">7</div>
+            <div class="key k56">8</div>
+            <div class="key k57">9</div>
+            <div class="key k48">0</div>
+            <div class="key k189">-</div>
+            <div class="key k187">=</div>
+            <div class="key backspace k8">Backspace</div>
+        </div>
+        <div class="line">
+            <div class="key tab k9">Tab</div>
+            <div class="key k81">q</div>
+            <div class="key k87">w</div>
+            <div class="key k69">e</div>
+            <div class="key k82">r</div>
+            <div class="key k84">t</div>
+            <div class="key k89">y</div>
+            <div class="key k85">u</div>
+            <div class="key k73">i</div>
+            <div class="key k79">o</div>
+            <div class="key k80">p</div>
+            <div class="key k219">[</div>
+            <div class="key k221">]</div>
+            <div class="key slash k220">\</div>
+        </div>
+        <div class="line">
+            <div class="key capslock k20">Caps</div>
+            <div class="key k65">a</div>
+            <div class="key k83">s</div>
+            <div class="key k68">d</div>
+            <div class="key k70">f</div>
+            <div class="key k71">g</div>
+            <div class="key k72">h</div>
+            <div class="key k74">j</div>
+            <div class="key k75">k</div>
+            <div class="key k76">l</div>
+            <div class="key k186">;</div>
+            <div class="key k222">'</div>
+            <div class="key enter k13">Enter</div>
+        </div>
+        <div class="line">
+            <div class="key leftShift k16">Shift</div>
+            <div class="key k90">z</div>
+            <div class="key k88">x</div>
+            <div class="key k67">c</div>
+            <div class="key k86">v</div>
+            <div class="key k66">b</div>
+            <div class="key k78">n</div>
+            <div class="key k77">m</div>
+            <div class="key k188">,</div>
+            <div class="key k190">.</div>
+            <div class="key k191">/</div>
+            <div class="key rightShift k16">Shift</div>
+        </div>
+        <div class="line">
+            <div class="key leftControl k17">Ctrl</div>
+            <div class="key cmd k91">Cmd</div>
+            <div class="key leftAlt k18">Alt</div>
+            <div class="key space k32">Space</div>
+            <div class="key rightAlt k18">Alt</div>
+            <div class="key cmd k91">Cmd</div>
+            <div class="key menu k93">Menu</div>
+            <div class="key rightControl k17">Ctrl</div>
+        </div>
+    </div>
+    <div class="buttondiv">
+        <button id="generateButton">Generate</button>
+        <div id="result"></div>
+    </div>
+ 
+</body> 
